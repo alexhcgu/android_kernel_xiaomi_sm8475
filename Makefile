@@ -521,7 +521,7 @@ LINUXINCLUDE    := \
 		$(USERINCLUDE)
 
 KBUILD_AFLAGS   := -D__ASSEMBLY__ -fno-PIE
-KBUILD_CFLAGS   := -Wall -Wundef -Wno-strict-prototypes -Wno-trigraphs \
+KBUILD_CFLAGS   := -Wall -Wundef -Wno-address-of-packed-member -Wno-strict-prototypes -Wno-trigraphs \
                    -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
                    -Wno-implicit-function-declaration -Wno-implicit-int \
                    -Wno-return-type -Wno-format-security \
