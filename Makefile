@@ -521,14 +521,11 @@ LINUXINCLUDE    := \
 		$(USERINCLUDE)
 
 KBUILD_AFLAGS   := -D__ASSEMBLY__ -fno-PIE
-KBUILD_CFLAGS := -Wall -Wundef -Werror=strict-prototypes -Wno-trigraphs \
-                 -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
-                 -Werror=implicit-function-declaration -Werror=implicit-int \
-                 -Werror=return-type -Wno-format-security \
-                 -Wno-address-of-packed-member \  # Disable address of packed member warning
-                 -Wno-error=address-of-packed-member \ # Treat this warning as a regular warning
-                 -Wno-frame-address \ # Suppress frame address warning
-                 -std=gnu89
+KBUILD_CFLAGS   := -Wall -Wundef -Wno-strict-prototypes -Wno-trigraphs \
+                   -fno-strict-aliasing -fno-common -fshort-wchar -fno-PIE \
+                   -Wno-implicit-function-declaration -Wno-implicit-int \
+                   -Wno-return-type -Wno-format-security \
+                   -std=gnu89
 KBUILD_CPPFLAGS := -D__KERNEL__
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
